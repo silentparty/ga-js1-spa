@@ -1,25 +1,87 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>JS1 - SPA</title>
-  <link rel="stylesheet" href="https://npmcdn.com/normalize.css">
-  <link rel="stylesheet" href="css/h5bp.css">
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
+   <head>
+      <title>The Material Design Lite Example</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-indigo.min.css" />
+      <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <!-- NOTE Sidebar  -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+         <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Contacts</span>
+            <nav class="mdl-navigation">
+              <ul class="demo-list-two mdl-list">
 
-  <div id="container">
-    <!-- Your HTML here -->
+                
+              </ul>
+            </nav>
+         </div>
+         <!-- NOTE Main Content  -->
+         <main class="mdl-layout__content">
+           <div class="page-content" style="padding-left:100px;">
 
-  </div>
+             <div class="demo-container mdl-grid">
+              <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+              <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+                <img src="http://fillmurray.com/300/300" alt="" />
+                <h3>Gary Sparklewand</h3>
+                <!-- NOTE Mobile -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                      <label class="mdl-textfield__label" for="sample2">Mobile Number</label>
+                      <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                <!-- NOTE Birthday -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                      <label class="mdl-textfield__label" for="sample2">Birthday</label>
+                      <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <!-- NOTE Address -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="sample1">
+                      <label class="mdl-textfield__label" for="sample1">Address</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="sample1">
+                      <label class="mdl-textfield__label" for="sample1">Company</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <input class="mdl-textfield__input" type="text" id="sample1">
+                      <label class="mdl-textfield__label" for="sample1">Favourite fruit</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                      <textarea class="mdl-textfield__input" type="text" rows= "1" id="schools"></textarea>
+                      <label class="mdl-textfield__label" for="schools">About</label>
+                    </div>
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+&markers=color:red%7Clabel:C%7C40.718217,-73.998284
+&key=AIzaSyAJuLuQQmb-UTehunEFEs-1gTes32-k3AM" alt="" />
+              </div>
+            </div>
 
+              <!-- NOTE Add item button -->
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">add</i>
+              </button>
+
+              <!-- NOTE Progressbar -->
+              <div class="mdl-spinner mdl-js-spinner is-active"></div>
+            </div>
+         </main>
+      </div>
   <!-- DOM Utility functions -->
   <script src="https://rawgit.com/jesstelford/a981e6877034231bd43b526a07b3a7b4/raw/js1-utilities.js"></script>
 
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+
   <!-- Our code -->
-  <script src="main.js"></script>
-</body>
+  <script src="./js/md5.min.js"></script>
+  <script src="./js/main.js"></script>
+  </body>
 </html>

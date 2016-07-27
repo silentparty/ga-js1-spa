@@ -1,0 +1,53 @@
+body {
+  font-family: "Circular Std";
+}
+
+/* SIDEBAR */
+
+.demo-list-two {
+  width: 300px;
+}
+
+
+/* MAIN CONTENT */
+.demo-container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.demo-content {
+  border-radius: 2px;
+  padding: 80px 56px;
+  margin-bottom: 80px;
+}
+
+.demo-card-image.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: url('../assets/demos/image_card.jpg') center / cover;
+}
+
+/* LOADERS */
+#pop-up {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border: 1px solid gray;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 50px;
+}
+
+#pop-up.loader {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  background-color: rgba(255,255,255,0.9);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
