@@ -27,36 +27,49 @@
               <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
               <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
                 <img src="http://fillmurray.com/300/300" alt="" />
-                <h3>Gary Sparklewand</h3>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="first-name">
+                  <label class="mdl-textfield__label" for="first-name">First Name</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="last-name">
+                  <label class="mdl-textfield__label" for="last-name">Last Name</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
                 <!-- NOTE Mobile -->
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-                      <label class="mdl-textfield__label" for="sample2">Mobile Number</label>
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="phone-mobile">
+                      <label class="mdl-textfield__label" for="phone-mobile">Mobile Number</label>
                       <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
                 <!-- NOTE Birthday -->
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-                      <label class="mdl-textfield__label" for="sample2">Birthday</label>
+                      <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="date-birthday">
+                      <label class="mdl-textfield__label" for="date-birthday">Birthday</label>
                       <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
                     <!-- NOTE Address -->
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="mdl-textfield__input" type="text" id="sample1">
-                      <label class="mdl-textfield__label" for="sample1">Address</label>
+                      <input class="mdl-textfield__input" type="text" id="address">
+                      <label class="mdl-textfield__label" for="address">Address</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="mdl-textfield__input" type="text" id="sample1">
-                      <label class="mdl-textfield__label" for="sample1">Company</label>
+                      <input class="mdl-textfield__input" type="text" id="company">
+                      <label class="mdl-textfield__label" for="company">Company</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <input class="mdl-textfield__input" type="text" id="sample1">
-                      <label class="mdl-textfield__label" for="sample1">Favourite fruit</label>
+                      <input class="mdl-textfield__input" type="text" id="fruit">
+                      <label class="mdl-textfield__label" for="fruit">Favourite fruit</label>
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                      <textarea class="mdl-textfield__input" type="text" rows= "1" id="schools"></textarea>
-                      <label class="mdl-textfield__label" for="schools">About</label>
+                      <textarea class="mdl-textfield__input" type="text" rows= "1" id="about"></textarea>
+                      <label class="mdl-textfield__label" for="about">About</label>
                     </div>
+                    <!-- Accent-colored raised button with ripple -->
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                      Save
+                    </button>
                     <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
 &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
 &markers=color:red%7Clabel:C%7C40.718217,-73.998284
