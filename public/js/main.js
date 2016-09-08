@@ -43,27 +43,28 @@ const db = firebase.database()
     return snapshot.val()
   }).then((snapshot) => {
     // state = snapshot
-    // renderUserList(state, sidebar)
-    Object.keys(snapshot).forEach(function(key) {
-      console.log(key, snapshot[key])
-      state.users.push(snapshot[key])
+    Object.keys(snapshot.users).forEach(function(key) {
+      state.users.push(snapshot.users[key])
     })
+    renderUserList(state, sidebar)
+    console.log(state)
   })
     .catch((err) => {
       console.error('there was a problem initialising the database', err)})
 })()
 
-function grabInput () {
-  name.first
-  name.last
-  phone
-  about
-  address
-  age
-  comapny
-  email
-  favouriteFruit
-}
+// TODO Use form to get all input?
+// function grabInput () {
+//   name.first = document.getElementById('first-name').value
+//   name.last = document.getElementById('last-name').value
+//   phone = document.getElementById('phone-mobile').value
+//   about = document.getElementById('about').value
+//   address =
+//   age =
+//   comapny =
+//   email =
+//   favouriteFruit =
+// }
 
 delegate('body', 'click', '.mdl-button', function (event) {
   console.log('you clicked', event.delegateTarget)
@@ -80,7 +81,7 @@ delegate('body', 'click', '.mdl-button', function (event) {
 // Render the user list
 function renderUserList (data, into) {
   console.log('rendering userList')
-  console.log(data.users)
+  // console.log(data.users)
   into.innerHTML = `
     ${data.users.map((item, index) => {
     return `
@@ -99,8 +100,6 @@ function renderUserList (data, into) {
 function renderUserDetail (data, into) {
   // TODO
 }
-
-
 
 render(state, container)
 

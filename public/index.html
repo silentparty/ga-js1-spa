@@ -26,7 +26,9 @@
              <div class="demo-container mdl-grid">
               <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
               <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-                <img src="http://fillmurray.com/300/300" alt="" />
+                <div class="mdl-card__media">
+                  <img class="article-image" src="http://fillmurray.com/300/300" border="0" alt="" />
+                </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="first-name">
                   <label class="mdl-textfield__label" for="first-name">First Name</label>
@@ -66,10 +68,14 @@
                       <textarea class="mdl-textfield__input" type="text" rows= "1" id="about"></textarea>
                       <label class="mdl-textfield__label" for="about">About</label>
                     </div>
-                    <!-- Accent-colored raised button with ripple -->
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
-                      Save
-                    </button>
+                    <div class="mdl-grid">
+                      <div class="mdl-cell mdl-cell--1-col">
+                        <!-- Accent-colored raised button with ripple -->
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                          Save
+                        </button>
+                      </div>
+                    </div>
                     <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap
 &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
 &markers=color:red%7Clabel:C%7C40.718217,-73.998284
@@ -77,10 +83,10 @@
               </div>
             </div>
 
-              <!-- NOTE Add item button -->
-              <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-                <i class="material-icons">add</i>
-              </button>
+            <!-- NOTE Add item button -->
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">add</i>
+            </button>
 
             </div>
          </main>
