@@ -9,7 +9,7 @@
 // TODO Re-enable me at the end (private data)
 // ;(function () {
 var container = document.querySelector('#container')
-var sidebar = document.querySelector('.demo-list-two')
+var sidebar = document.querySelector('.user-list')
 
 var state = {
   users: []
@@ -119,6 +119,7 @@ function renderUserList (data, into) {
 
 function renderUserDetail (data, into) {
   // TODO
+  componentHandler.upgradeDom()
 }
 
 render(state, container)
