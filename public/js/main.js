@@ -14,6 +14,14 @@ var sidebar = document.querySelector('.demo-list-two')
 var state = {
   users: []
 }
+
+var newUser = {
+  name: {
+    first: 'value',
+    last: 'value'
+  }
+}
+
 const config = {
   apiKey: 'AIzaSyBC9k1udNheyFSYuCEkovjfdXxm-De0ROE',
   authDomain: 'mythical-zodiac-138523.firebaseapp.com',
@@ -39,12 +47,13 @@ const db = firebase.database()
 
 ;(function () {
   console.log('contacting firebase...')
-  firebase.database().ref().once('value').then(function (snapshot) {
+  db.ref().once('value').then(function (snapshot) {
     return snapshot.val()
   }).then((snapshot) => {
-    // state = snapshot
-    Object.keys(snapshot.users).forEach(function(key) {
+    console.log(snapshot)
+    Object.keys(snapshot.users).forEach(function(key, index) {
       state.users.push(snapshot.users[key])
+      console.log(index)
     })
     renderUserList(state, sidebar)
     console.log(state)
@@ -54,19 +63,30 @@ const db = firebase.database()
 })()
 
 // TODO Use form to get all input?
-// function grabInput () {
-//   name.first = document.getElementById('first-name').value
-//   name.last = document.getElementById('last-name').value
-//   phone = document.getElementById('phone-mobile').value
-//   about = document.getElementById('about').value
-//   address =
-//   age =
-//   comapny =
-//   email =
-//   favouriteFruit =
-// }
+function grabInput () {
+  newUser.name.first = document.querySelector('#first-name').value
+  newUser.name.last = document.querySelector('#last-name').value
+  newUser.phone = document.querySelector('#phone-mobile').value
+  newUser.about = document.querySelector('#about').value
+  newUser.address = document.querySelector('#address').value
+  newUser.birthday = document.querySelector('#date-birthday').value
+  newUser.company = document.querySelector('#company').value
+  newUser.favouriteFruit = document.querySelector('#fruit').value
+}
 
-delegate('body', 'click', '.mdl-button', function (event) {
+function addUser () {
+  grabInput()
+  db.ref('users/').push(newUser)
+}
+
+delegate('body', 'click', '#btn-save', function (event) {
+  console.log('you clicked', event.delegateTarget, 'and')
+  addUser()
+  // TODO use a promise! once it resolves, update the sidebar and refresh the display
+  // TODO Make names (at the very least) a required field
+})
+
+delegate('body', 'click', '.mdl-list__item', function (event) {
   console.log('you clicked', event.delegateTarget)
 })
 
